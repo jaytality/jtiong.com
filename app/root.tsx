@@ -1,5 +1,6 @@
 import type { LinksFunction } from "@remix-run/cloudflare";
-import { cssBundleHref } from "@remix-run/css-bundle";
+import { MetaFunction } from "@remix-run/node";
+// import { cssBundleHref } from "@remix-run/css-bundle";
 import {
   Links,
   LiveReload,
@@ -10,10 +11,6 @@ import {
 } from "@remix-run/react";
 
 import styles from './styles/app.css';
-
-// export const links: LinksFunction = () => [
-//   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
-// ];
 
 export const links: LinksFunction = () => {
   return [{ rel: 'stylesheet', href: styles }]
