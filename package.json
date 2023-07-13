@@ -4,8 +4,10 @@
   "type": "module",
   "scripts": {
     "build": "npm run build:css && remix build",
-    "build:css": "tailwindcss -w -i ./styles/app.css -o app/styles/app.css",
-    "dev": "remix dev --no-restart -c \"npm run start\"",
+    "build:css": "tailwindcss -m -i ./styles/app.css -o app/styles/app.css",
+    "dev": "concurrently \"npm run dev:css\" \"npm run dev:run\"",
+    "dev:run": "remix dev --no-restart -c \"npm run start\"",
+    "dev:css": "tailwindcss -w -i ./styles/app.css -o app/styles/app.css",
     "start": "wrangler pages dev --compatibility-date=2023-06-21 ./public",
     "typecheck": "tsc"
   },
