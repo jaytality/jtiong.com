@@ -9,11 +9,11 @@ export const meta: V2_MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.8" }}>
-      <h1>jtiong.com</h1>
-      <p>
-        Not a lot is going on here right now, but stay tuned!
+    <div className="h-screen bg-slate-700 flex justify-center items-center">
+      <h2 className="text-gray-200 font-extrabold text-5xl">jtiong.com</h2>
+      <p className="text-white">
+        More stuff coming soon!
       </p>
     </div>
-  );
+  )
 }
