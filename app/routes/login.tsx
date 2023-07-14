@@ -1,5 +1,5 @@
 // app/routes/login.tsx
-import { Layout } from '~/components/layout'
+import { Layout } from '~/components/layouts/layout'
 
 export default function Login() {
   return (
